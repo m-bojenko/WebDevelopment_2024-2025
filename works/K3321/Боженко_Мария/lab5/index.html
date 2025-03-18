@@ -5,39 +5,46 @@
 		<title>Карта-изображение</title>
 	</head>
 	<body> 
-		<p align="center"><img src="wonderland.jpg" width="900" usemap="#map" alt="Навигация"></p>
+		<p align="center"><img src="wonderland.jpg" width="800" usemap="#map" alt="Навигация"></p>
 		<p>
 			<map name="map"> 
-				<area shape="rect" alt="Красный дом" title="Зайти в красный дом" coords="166,425, 280,546" href="ex1.html">
-				<area shape="poly" alt="Болото" title="Болото" coords="117,285 ,155,259, 213,248, 254,259, 250,290, 202,311, 153,311" onclick="alertFunction()">
-				<area shape="circle" alt="Компас" title="Найти скрытое" coords="88, 92, 37" onclick="showButton()">
+				<area shape="rect" alt="Красный дом" title="Зайти в красный дом" coords="148,378, 249,485" href="ex1_2.html">
+				<area shape="poly" alt="Болото" title="Болото" coords="104,253, 138,230, 189,220, 226,230, 222,258, 180,276, 136,276" onclick="alertFunction()">
+				<area shape="circle" alt="Компас" title="Найти скрытое" coords="78, 82, 33" onclick="showButton()">
 				<area shape="poly" alt="Замок" title="Перекрасить розы в красный цвет" 
-				coords="305,312, 315,220, 351,147, 411,73, 459,76, 535,161, 577,254, 558,310" onclick="changeBackground()">
-				<area shape="rect" alt="Дверь" title="" coords="722,284, 757,337" href="ex2_2.html">
+				coords="271,277, 280,196, 312,131, 365,65, 408,68, 476,143, 513,226, 496,276" onclick="changeBackground()">
+				<area shape="rect" alt="Дверь" title="Открыть дверь" coords="642,252, 673,300" href="ex2_2.html">
 			</map>
-			
-			<button id="click_me" style="display: none;">Нажми на меня!</button>
-			
-			<script>
-				function alertFunction() {
-					alert("Вы попали в болото!");
-				}
-				
-				function showButton() {
-					const button = document.getElementById("click_me");
-					button.style.display = "block";
-				}
-				
-				function changeBackground() {
-				
-					const currentColor = document.body.style.backgroundColor;
-					if (currentColor == "red"){
-						document.body.style.backgroundColor = "white";
-					} else {
-						document.body.style.backgroundColor = "red";
-					}
-				}
-			</script>
 		</p>
+		<p align="center">
+			<button id="click_me" style="display: none;" onclick="showButton()">Нажми на меня!</button>
+		</p>
+		
+		<script>
+			function alertFunction() {
+				alert("Вы попали в болото!");
+			}
+				
+			function showButton() {
+				const button = document.getElementById("click_me");
+					
+				if (button.style.display == "none"){
+					button.style.display = "block";
+				} else {
+					button.style.display = "none";
+				}
+			}
+				
+			function changeBackground() {
+				
+				const currentColor = document.body.style.backgroundColor;
+				if (currentColor == "red"){
+					document.body.style.backgroundColor = "white";
+				} else {
+					document.body.style.backgroundColor = "red";
+				}
+			}
+		</script>
+		
 	</body>
 </html>
