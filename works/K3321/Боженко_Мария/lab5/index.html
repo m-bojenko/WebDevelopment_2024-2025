@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Карта-изображение</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body> 
 		<p align="center"><img src="wonderland.jpg" width="800" usemap="#map" alt="Навигация"></p>
@@ -20,31 +21,7 @@
 			<button id="click_me" style="display: none;" onclick="showButton()">Нажми на меня!</button>
 		</p>
 		
-		<script>
-			function alertFunction() {
-				alert("Вы попали в болото!");
-			}
-				
-			function showButton() {
-				const button = document.getElementById("click_me");
-					
-				if (button.style.display == "none"){
-					button.style.display = "block";
-				} else {
-					button.style.display = "none";
-				}
-			}
-				
-			function changeBackground() {
-				
-				const currentColor = document.body.style.backgroundColor;
-				if (currentColor == "red"){
-					document.body.style.backgroundColor = "white";
-				} else {
-					document.body.style.backgroundColor = "red";
-				}
-			}
-		</script>
+		<script src="index_func.js"></script>
 		
 	</body>
 </html>

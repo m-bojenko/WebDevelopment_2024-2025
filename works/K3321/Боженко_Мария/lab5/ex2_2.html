@@ -3,43 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Моя первая веб-страница</title>
-    <style>
-        body {
-            background-color: SeaGreen;
-            color: #800080;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3em; /* Размер заголовка */
-            margin-bottom: 20px; /* Отступ снизу */
-        }
-
-        a {
-            color: #800080; /* Цвет ссылки */
-            text-decoration: none; /* Убираем подчеркивание */
-            font-size: 1.2em; /* Размер шрифта ссылки */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Подчеркивание при наведении */
-        }
-
-        img {
-            margin-top: 20px; /* Отступ сверху для изображения */
-            border-radius: 10px; /* Скругление углов изображения */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для изображения */
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="ex2_2.css">
 </head>
 <body>
     <h1>Это текст моей уже совсем не первой страницы</h1>
     <a href="http://www.w3.org">Это гиперссылка на сайт Консорциума Всемирной паутины</a>
     <br/>
     <img src="Прифет.jpg" alt="Прифет" width="300"/></br>
-	<button onclick="window.location.href='index.html'">Вернуться к карте</button>
+	<button onclick="backToMap()">Вернуться к карте</button>
+	
+	<script src="index_func.js"></script>
 </body>
 </html>
