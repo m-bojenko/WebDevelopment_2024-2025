@@ -24,3 +24,4 @@ function changeBackground() {
 function backToMap() {
 	window.location.href='index.html';
 }
+
